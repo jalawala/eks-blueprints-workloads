@@ -37,9 +37,11 @@ spec:
       targetRevision: main
       path: kubernetes/helm/ecsdemo-nodejs
       helm:
-        parameters:
-        - name: replicaCount
-          value: '3'
+        #parameters:
+        #- name: replicaCount
+        #  value: '3'
+        values: |-
+          replicaCount: 3
     ecsdemoCrystal:
       createProject: true
       repoURL: https://github.com/aws-containers/ecsdemo-crystal.git
