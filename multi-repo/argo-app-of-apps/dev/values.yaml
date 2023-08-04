@@ -29,12 +29,7 @@ spec:
           hosts:
             - paths:
                 - path: /
-                  pathType: Prefix        
-        #parameters:
-        #- name: replicaCount
-        #  value: '3'    
-        #values: |-
-
+                  pathType: Prefix
     ecsdemoNodejs:
       createProject: true
       repoURL: https://github.com/aws-containers/ecsdemo-nodejs.git
@@ -42,11 +37,7 @@ spec:
       targetRevision: main
       path: kubernetes/helm/ecsdemo-nodejs
       helm:
-        #parameters:
-        #- name: replicaCount
-        #  value: '3'
-        values: |-
-          replicaCount: 2
+        replicaCount: '3'
     ecsdemoCrystal:
       createProject: true
       repoURL: https://github.com/aws-containers/ecsdemo-crystal.git
@@ -54,6 +45,4 @@ spec:
       targetRevision: main
       path: kubernetes/helm/ecsdemo-crystal
       helm:
-        parameters:
-        - name: replicaCount
-          value: '3'
+        replicaCount: '3'
